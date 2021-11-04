@@ -1,14 +1,12 @@
-module as1 (
-  x1, x2, x3, x4, F
-);
-  input x1, x2, x3, x4;
+module as1(x, F);
+  input [3:0] x;
   output F;
-  wire nx1, nx3, nx4;
+  wire nx1, nx3, nx4, w1, w2;
 
-  assign nx1 = ~x1;
-  assign nx3 = ~x3;
-  assign nx4 = ~x4;
-  assign w1 = x1 & x2 & nx4;
-  assign w2 = w2 & nx1 & nx3;
+  assign nx1 = ~x[0];
+  assign nx3 = ~x[2];
+  assign nx4 = ~x[3];
+  assign w1 = x[0] & x[1] & nx4;
+  assign w2 = nx1 & nx3;
   assign F = w1 | w2;
 endmodule

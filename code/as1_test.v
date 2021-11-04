@@ -1,35 +1,34 @@
-'include "as1.v"'
+`include "as1.v"
 
 module as1_test();
-    reg in1, in2, in3 ,in4;
+    reg [3:0] in;
     wire out;
-    as1 circut(in1, in2, in3, in4, out);
+
+    as1 circut(in, out);
 
     initial begin
-        $monitor($stime, ": in1=%b, in2=%b, in3=%b, in4=%b-->out=%b\n"
-        ,in1, in2, in3, in4, out);
+        $monitor($stime, ": in=%b --> out=%b\n"
+        ,in, out);
         $dumpfile("as1.vcd");
-        $dumvars(0, as1_test);
+        $dumpvars(0, as1_test);
 
-            in1 = 0;
-        #1  in2 = 0;
-        #1  in3 = 0;
-        #1  in4 = 0;
-        #5  in1 = 1; in2 = 0; in3 = 0; in4 = 0;
-        #5  in1 = 0; in2 = 1; in3 = 0; in4 = 0;
-        #5  in1 = 1; in2 = 1; in3 = 0; in4 = 0;
-        #5  in1 = 0; in2 = 0; in3 = 1; in4 = 0;
-        #5  in1 = 1; in2 = 0; in3 = 1; in4 = 0;
-        #5  in1 = 0; in2 = 1; in3 = 1; in4 = 0;
-        #5  in1 = 1; in2 = 1; in3 = 1; in4 = 0;
-        #5  in1 = 0; in2 = 0; in3 = 0; in4 = 1;
-        #5  in1 = 1; in2 = 0; in3 = 0; in4 = 1;
-        #5  in1 = 0; in2 = 1; in3 = 0; in4 = 1;
-        #5  in1 = 1; in2 = 1; in3 = 0; in4 = 1;
-        #5  in1 = 0; in2 = 0; in3 = 1; in4 = 1;
-        #5  in1 = 1; in2 = 0; in3 = 1; in4 = 1;
-        #5  in1 = 0; in2 = 1; in3 = 1; in4 = 1;
-        #5  in1 = 1; in2 = 1; in3 = 1; in4 = 1;
-        #5  $finish
+        in = 4'b0000;
+        #5 in = 4'b0000;
+        #5 in = 4'b0001;
+        #5 in = 4'b0010;
+        #5 in = 4'b0011;
+        #5 in = 4'b0100;
+        #5 in = 4'b0101;
+        #5 in = 4'b0110;
+        #5 in = 4'b0111;
+        #5 in = 4'b1000;
+        #5 in = 4'b1001;
+        #5 in = 4'b1010;
+        #5 in = 4'b1011;
+        #5 in = 4'b1100;
+        #5 in = 4'b1101;
+        #5 in = 4'b1110;
+        #5 in = 4'b1111;
+        #5  $finish;
     end
 endmodule

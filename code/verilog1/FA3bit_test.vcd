@@ -1,0 +1,130 @@
+$date
+	Thu Nov  4 20:20:48 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module FA3bit_test $end
+$var wire 3 ! s [2:0] $end
+$var wire 1 " c3 $end
+$var reg 1 # c0 $end
+$var reg 3 $ x [2:0] $end
+$var reg 3 % y [2:0] $end
+$scope module foo $end
+$var wire 1 # c0 $end
+$var wire 3 & x [2:0] $end
+$var wire 3 ' y [2:0] $end
+$var wire 3 ( s [2:0] $end
+$var wire 1 " c3 $end
+$var wire 1 ) c2 $end
+$var wire 1 * c1 $end
+$scope module FA1 $end
+$var wire 1 # c_in $end
+$var wire 1 * c_out $end
+$var wire 1 + s $end
+$var wire 1 , x $end
+$var wire 1 - y $end
+$upscope $end
+$scope module FA2 $end
+$var wire 1 * c_in $end
+$var wire 1 ) c_out $end
+$var wire 1 . s $end
+$var wire 1 / x $end
+$var wire 1 0 y $end
+$upscope $end
+$scope module FA3 $end
+$var wire 1 ) c_in $end
+$var wire 1 " c_out $end
+$var wire 1 1 s $end
+$var wire 1 2 x $end
+$var wire 1 3 y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+bx (
+bx '
+bx &
+bx %
+bx $
+0#
+x"
+bx !
+$end
+#5
+01
+1+
+b1 !
+b1 (
+0.
+0)
+0"
+0*
+1-
+00
+03
+0,
+0/
+02
+b1 %
+b1 '
+b0 $
+b0 &
+#10
+0+
+b10 !
+b10 (
+1.
+1*
+1,
+b1 $
+b1 &
+#15
+11
+1+
+b101 !
+b101 (
+0.
+0*
+1)
+0-
+10
+1/
+b10 %
+b10 '
+b11 $
+b11 &
+#20
+0+
+b110 !
+b110 (
+1.
+1*
+1-
+b11 %
+b11 '
+#25
+1"
+13
+12
+b111 %
+b111 '
+b111 $
+b111 &
+#30
