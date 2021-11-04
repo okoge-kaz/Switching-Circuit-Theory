@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+
+<head>
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!--<meta name="viewport" content="width=device-960px">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>東工大ポータル</title>
+<link rel="stylesheet" href="./portal-otp.css" type="text/css" />
+<link rel="stylesheet" href="./print-r.css" type="text/css" media="print"/>
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="icon" href="./favicon.png" />
+
+<script src="./js/jquery.min.js"></script>
+<script>
+$(function(){
+  $("#toggle").click(function(){
+    $("#menu").slideToggle();
+    return false;
+  });
+  $(window).resize(function(){
+    var win = $(window).width();
+    var p = 800;
+    if(win > p){
+      $("#menu").show();
+    }
+  });
+});
+</script>
+
+</head>
+
+<body>
+
+<!--header begin-->
+<header class="header">
+<div class="titlebar"> | <a href="./sitemap.html">サイトマップ</a> | <a href="./portal-e.pl">ENGLISH</a> |</div>
+<a href="./"><img src="./homelogo40.png" alt="東工大ポータル"></a>
+<span class="titlelogo">&nbsp;東工大ポータル(学内者専用情報基盤サービス)</span>
+
+<div id="menu-box">
+  <div id="toggle"><a href="#">メインメニュー</a></div>
+  <ul id="menu" class="">
+    <li><a href="./info/index.html">&#x1f4ac; お知らせ</a></li>
+    <li><a href="./guide/index.html">&#x1f4d6; 利用案内</a></li>
+    <li><a href="./ezguide/index.html">&#x1f449; 操作・設定ガイド</a></li>
+    <li><a href="./faq/index.html">&#x1f50e; よくある質問</a></li>
+<!--    <li><a href="./helpdesk.html">ITサービスデスク</a></li>-->
+    <li><a href="./inquiry.html">&#x1f4e9; お問い合わせ</a></li>
+  </ul>
+<p style="clear: both;"></p>
+</div>
+
+</header>
+<!--header end-->
+ 
+<!--left wrapper begin-->
+<div class="wrapper">
+<!--left content begin-->
+<div class="content">
+<h2>東京工業大学情報基盤利用承諾</h2>
+<p>東京工業大学の情報基盤を利用するにあたり、本学の「<a href="http://www.is.c.titech.ac.jp/infoliteracy/">情報倫理とセキュリティのためのクイックガイド</a>」に記載の本学情報倫理ポリシー及び情報セキュリティポリシーならびに下記の「東工大情報基盤利用ガイドライン」、「通信記録の取り扱い」をよく理解し、情報環境を乱すことないよう良識に基づいた節度ある利用を行うことに同意します。</p>
+
+<div id="esk-news">
+<p><a href="./info/index.html#20210202">更新したICカードで証明書認証を行うには証明書管理ツールのアップデートをお願いします</a></p>
+</div>
+
+
+<!--
+<div class="news">
+<h4 style="background:#00DD00;"><span style="color: #fff;">障害情報</span></h4>
+<ul>
+<li><strong>21/07/12 Tokyo Tech Portal</strong><br />
+  東工大ポータルは2021年7月12日22時頃復旧しました。ユーザの皆様方には多大なご迷惑をおかけしましたことを心よりお詫び申し上げます。</li>
+
+<li><strong>教員の皆様へ</strong><br />
+  7/13(火)の授業のZoom等の情報を学務から別途収集する予定です。詳しくは全学通知をご覧ください。全学通知が見られない場合は、お近くの教員にお尋ね下さい。（非常勤講師の世話教員の方々にはお手数をおかけしますが、各非常勤講師の情報収集にご協力をお願します）</li>
+<li><strong>学生の皆様へ</strong><br />
+  7/13(火)の授業に関する情報は大学で付与しているメールアドレス宛に送付しております。T2SCHOLA・OCW-iからの通知がなかった場合は、そちらもご確認いただきますようお願いいたします</li>
+</ul>
+</div>
+-->
+
+
+<div id="portal-form">
+<form>
+<input type="button" value="同意（証明書認証）" onClick="location.href='https://portal.nap.gsic.titech.ac.jp/GetAccess/Login?Template=cert_key&GAREASONCODE=-1&GARESOURCEID=T2SCHOLA2019&GAURI=https://t2schola.titech.ac.jp/auth/eltitech/autologin.php&Reason=-1&APPID=T2SCHOLA2019&URI=https://t2schola.titech.ac.jp/auth/eltitech/autologin.php'">
+<span class="titlelogo"><a href="./ezguide/cr-setup.html">ICカードリーダ(設定必要)</a>とICカードでログイン</span>
+</form>
+<form>
+<input type="button" value="同意（マトリクス/OTP認証）" onClick="location.href='https://portal.nap.gsic.titech.ac.jp/GetAccess/Login?Template=userpass_key&AUTHMETHOD=UserPassword&GAREASONCODE=-1&GARESOURCEID=T2SCHOLA2019&GAURI=https://t2schola.titech.ac.jp/auth/eltitech/autologin.php&Reason=-1&APPID=T2SCHOLA2019&URI=https://t2schola.titech.ac.jp/auth/eltitech/autologin.php'">
+<span class="titlelogo">マトリクスコードまたはワンタイムパスワードでログイン</span>
+</form>
+</div>
+
+<p>※マトリクス認証のパスワードを忘れた方は<a href="./info/index.html#20200327">こちらをご参照下さい</a>。</p>
+
+<h3>東工大情報基盤利用ガイドライン</h3>
+<p>次の事項の違反者に対しては、東工大情報基盤の利用を一時停止し、その後の対応は全学または部局等の情報倫理委員会に委ねる。</p>
+<ol>
+<li>自分自身のログイン・アカウントのみを使用する。<br />（ログイン・アカウントの貸借をしない。）</li>
+<li>端末を東工大情報基盤に接続する際に、<a href="./hosoku.html">セキュリティ上の問題</a>がないか十分確認する。</li>
+<li>著作権を侵害しない。</li>
+<li>公序良俗に反した行為を行わない。</li>
+<li>ネズミ講等の詐欺行為を行わない。</li>
+<li>名誉毀損・ハラスメントになる行為を行わない。</li>
+<li><a href="hosoku.html">不正な攻撃</a>は行わない。</li>
+<li><a href="https://www.noc.titech.ac.jp/service/policy_violation.shtml">例示するP2Pソフトウェア</a>およびそれと同等の通信を行うソフトウェアを利用しない。</li>
+</ol>
+
+<h3>通信記録の取り扱い</h3>
+<p>セキュリティ維持及び学内外に対する迷惑行為等の発覚時への対応のため、次の通信利用記録を保存する。ただし、通信利用記録は厳重に管理し、
+目的外使用は行わない。</p>
+<ol>
+<li>アクセス日時</li>
+<li>接続ユーザ名（計算機ログインID）</li>
+<li>IPアドレスまたはMACアドレス</li>
+<li>ウェブアクセス履歴（URL）</li>
+<li>その他セキュリティ機器が分析に用いた情報</li>
+</ol>
+
+</div><!--left content end-->
+
+
+<!--right sidebar begin-->
+
+
+<div class="sidebar">
+
+
+<!--
+<div class="news">
+<h4 style="background:#ff4f50;"><span style="color: #fff;">障害情報</span></h4>
+<ul>
+<li><strong>21/07/12 東工大STARサーチ（STAR Search）</strong><br />
+現在アクセスできない状況です。ご迷惑をお掛けしますが、復旧まで今しばらくお待ちください。 <br />
+問合せ：search.help(at)star.titech.ac.jp</li>
+</ul>
+</div>
+-->
+
+
+<!--
+<div class="news">
+<h4 style="background:#ff4f50;"><span style="color: #fff;">障害情報</span></h4>
+<ul>
+<li><strong>21/04/26 TOKYO TECH OCW/OCW-i統合システム</strong><br />
+接続できない状況になっています。（復旧対応中）<br />
+問合せ：kyomu.ocw(at)jim.titech.ac.jp</li>
+</ul>
+</div>
+-->
+
+<!--
+<div class="news">
+<h4 style="background:#ff4f50;"><span style="color: #fff;">障害情報</span></h4>
+<ul>
+<li><strong>21/02/18 物品等請求システム/人事給与Webシステム</strong><br />
+接続できない状況になっています。（復旧対応中）<br/>
+ご迷惑をお掛けし申し訳ございませんが復旧まで暫くお待ちください。<br />
+問合せ：kib.sie(at)jim.titech.ac.jp<br />
+</ul>
+</div>
+-->
+
+<!--
+<div class="news">
+<h4 style="background:#ff4f50;"><span style="color: #fff;">緊急メンテナンス</span></h4>
+<ul>
+<li><strong>教務Webシステム（Web system for S&F）</strong><br />
+終了時間：4月16日（金）10:00（予定）<br />
+問合せ：kyomu.web(at)jim.titech.ac.jp<br />
+</li>
+</ul>
+</div>
+-->
+
+<!--
+<div class="news">
+<h4 style="background:#ff4f50;"><span style="color: #fff;">障害情報</span></h4>
+<ul>
+<li><strong>21/07/12 Tokyo Tech Portal</strong><br />
+証明書認証およびマトリクス/OTP認証ともにログインできない状況です。ご迷惑をお掛けして申し訳ございませんが復旧まで暫くお待ち下さい。<br />
+</ul>
+</div>
+-->
+
+<!--
+<div class="news">
+<h4 style="background:#00DD00;"><span style="color:white;">障害情報</span></h4>
+<ul>
+<li><strong>20/11/4 Tokyo Tech Portal</strong><br />
+証明書認証、マトリクス認証ともに接続できない状況でしたが、9時55分頃に復旧致しました。</br>
+この度はご迷惑をお掛けして申し訳ございません。</br>
+</li>
+</ul>
+</div>
+-->
+
+<!--
+<div class="news">
+<h4 style="background:#00DD00;"><span style="color: #fff;">障害情報</span></h4>
+<ul>
+<li><strong>21/04/02 共通メールシステム</strong><br />
+<a href="https://www.noc.titech.ac.jp/info/trouble/20210402.shtml">基幹ネットワークの障害のため</a>配送遅延が発生しておりましたが9:40分頃に復旧致しました。
+ご迷惑をお掛けしたことを心よりお詫び申し上げます。 <br />
+</li>
+</ul>
+</div>
+-->
+
+
+<!--
+<div class="news">
+<h4 style="background: #ffe011;"><span style="color: #555;">&#x1F514; 重要なお知らせ</span></h4>
+<ul>
+
+<li><strong>2021/08/31   教務Webシステム</strong><br />
+第2Q成績公開に伴いポータルへのアクセス集中が見込まれます。
+ログインできない場合、時間を置いてから再度お試しください。<br/>
+</li>
+
+</ul>
+</div>
+-->
+
+
+<!--
+<div class="news">
+<h4 style="background: #ffe011;"><span style="color: #555;">&#x1F514; 重要なお知らせ</span></h4>
+<ul>
+
+<li><strong>2021/01/07  東工大ITサービスデスク</strong><br />
+テレワークに伴う業務縮小のため、パスワード変更以外の電話受付を休止いたします。ご質問がある場合は<a href="./inquiry.html">メールにてお問い合わせ</a>をお願い致します。<br/>ご理解・ご協力の程どうぞよろしくお願い致します。
+</li>
+
+</ul>
+</div>
+-->
+
+
+<!--
+<div class="news">
+<h4 style="background: #ff4f50;"><span style="color: #fff;">&#x26A0; メンテナンス情報</span></h4>
+<ul>
+
+<li>
+<strong>[緊急メンテナンス] TOKYO TECH OCW-i システム</strong><br />
+現在、OCW-iシステムへの接続が不安定になっているため、
+以下のとおり緊急メンテナンスを実施します。<br/>
+日時：6月23日（火） 12:30 - 13:30<br />
+問合せ：kyomu.ocw(at)jim.titech.ac.jp<br />
+</li>
+
+</ul>
+</div>
+-->
+
+
+<!--
+<div class="news">
+<h4 style="background: #ffe011;"><span style="color: #555;">&#x26A0; メンテナンス情報</span></h4>
+<ul>
+
+<li>
+<strong>教務Webシステム</strong><br />
+日時：9月24日（金）4:00 - 28日（火）9:00<br />
+問合せ：kyo.ict(at)jim.titech.ac.jp（内線 3008）<br />
+</li>
+
+</ul>
+</div>
+-->
+
+
+<!--
+
+<li>
+<strong>教務Webシステム</strong><br />
+日時：3月26日（金）9:00 - 4月1日（木）13:00<br />
+問合せ：kyo.ict(at)jim.titech.ac.jp (内線 3008)<br />
+</li>
+
+
+<li>
+<strong>物品等請求システム</strong><br />
+日程：3月16日（月）5:00 - 17:15<br />
+問合せ：kei.kanri(at)jim.titech.ac.jp <br />
+</li>
+
+
+<li>
+<strong>東工大リサーチリポジトリ（T2R2）</strong><br />
+日程：9月21日（火）10:45 - 12:15（予定）<br />
+問合せ：t2r2(at)libra.titech.ac.jp <br />
+</li>
+
+
+<li>
+<strong>東工大STARサーチ(STAR Search)</strong><br />
+日程：9月21日（火）10:45 - 12:15（予定）<br />
+問合せ：search.help(at)star.titech.ac.jp <br />
+</li>
+
+
+<li>
+<strong>人事給与Webシステム</strong><br />
+日時：4月28日（水）終日<br />
+問合せ：人事課 給与グループ<br />
+e-mail：jin.qyo(at)jim.titech.ac.jp<br />
+</li>
+
+
+<li>
+<strong>IRデータ分析システム (DAS)</strong><br />
+日程：12月23日(月) 9:00 - 25日(水) 18:00（予定）<br />
+問合せ：office(at)irds.titech.ac.jp <br />
+</li>
+
+
+<li>
+<strong>業務ID管理サービス</strong><br />
+日時：3月19日(木) 5:00 - 12:00<br />
+問合せ：kib.sie(at)jim.titech.ac.jp<br />
+</li>
+
+
+<li>
+<strong>T2BOX</strong><br />
+日程：4月29日（木）0:00 - 6:00（予定）<br />
+問合せ：t2box-support(at)gsic.titech.ac.jp<br />
+</li>
+
+
+<li>
+<strong>T2SCHOLA</strong><br />
+日程：7月18日（日）8:00 - 11:00（予定）<br />
+問合せ：kyomu.schola(at)jim.titech.ac.jp<br />
+</li>
+
+
+<li>
+<strong>申請システム（T2APPs）</strong><br />
+日時：8月20日（金）18:00 - 20:00<br />
+問合せ：workflow_inquiry(at)irds.titech.ac.jp<br />
+</li>
+
+-->
+
+
+
+
+
+<div class="news">
+<h4 style="background: #4099ff">お知らせ</h4>
+<ul>
+<li>21/09/13 <span style="color:red;">[新着]</span>&nbsp;<a href="./info/index.html#20210913">EdgeのICカード認証について</a></li>
+<li>21/09/01 <span style="color:red;">[重要]</span>&nbsp;<a href="http://www.officesoft.gsic.titech.ac.jp/index.shtml">Adobe社の包括ライセンスはソフトウエア提供方式変更により「シリアル番号ライセンス」の製品が2021年9月1日から利用できなくなりました</a></li>
+<!--<li>21/07/20 <span style="color:red;">[重要]</span>&nbsp;<a href="http://www.officesoft.gsic.titech.ac.jp/">包括ライセンスAdobe製品の提供方法が変更になりました ※「シリアル番号ライセンス」製品は8月末をもって利用不可となります</a></li>-->
+<li>21/04/01 <a href="./info/index.html#20210202">証明書管理ツール(Windows/macOS)アップデートリリースのお知らせ ※macOS Big Sur 11(M1)に対応しました</a></li>  
+<!--<li>20/10/29 <a href="http://www.officesoft.gsic.titech.ac.jp/other/Caution_Use_of_Unlicensed_Software_is_Prohibited.pdf">不正ライセンスのソフトウェア利用についての注意喚起</a></li>-->
+<li>20/04/06 <a href="./info/index.html#20200406">学内ネットワークアクセス（SSL-VPN）の利用に関するお願い</a></li>
+<li>20/04/06 <a href="https://www.libra.titech.ac.jp/ej_notice">データベース・電子ジャーナル利用上の注意</a></li>
+<li>20/03/27 <a href="./info/index.html#20200327">マトリクス/OTP認証のパスワードを忘れたユーザの対応について</a></li>
+
+<!--<li>17/09/22 <a href="./info/mail2017.html">共通メールシステム更新のお知らせ</a></li>-->
+<!--<li>16/12/05 <span style="color:red;">[注意]</span>&nbsp;<a href="http://cert.titech.ac.jp/warning/2016/12/02/1480641840/" target="_blank">東工大ポータルサイトを騙った不正サイトについての注意喚起</a></li>-->
+</ul>
+<p><a href="./info/index.html">以前のお知らせ</a>&nbsp;|&nbsp;<a href="./info/trouble.html">過去の障害情報</a></p>
+
+</div>
+
+<div class="news">
+<h4 style="background: #3080cf">ページ案内</h4>
+<form id="cse-search-box" action="https://google.com/cse" target="_blank">
+<input type="hidden" name="cx" value="014890667772573757656:n0unx5nscnq" />
+<input type="hidden" name="ie" value="UTF-8" />
+<input type="text" name="q" size="30" />
+<input type="submit" name="sa" value="検索" />
+</form>
+<script type="text/javascript" src="https://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+
+<dl>
+<dt><a href="./info/index.html">お知らせ</a></dt>
+<dd>新着情報、重要なお知らせ、障害情報</dd>
+
+<dt><a href="./guide/index.html">利用案内</a></dt>
+<dd>東工大情報基盤の利用・サービスについて</dd>
+
+<dt><a href="./ezguide/index.html">操作・設定ガイド</a></dt>
+<dd>ポータルの操作、各種設定について</dd>
+
+<dt><a href="./faq/index.html">よくある質問(FAQ)</a></dt>
+<dd>トラブルなどのよくある問い合わせ</dd>
+
+<dt><a href="./inquiry.html">お問い合わせ</a></dt>
+<dd>お問い合わせ先一覧</dd>
+</dl>
+</div>
+
+<div class="news">
+<h4 style="background: #3060af">関連リンク</h4>
+<a href="http://www.titech.ac.jp">東京工業大学</a> / <a href="http://www.gsic.titech.ac.jp">学術国際情報センター(GSIC)</a><br />
+<a href="https://www.noc.titech.ac.jp">ネットワークシステム担当(NOC)</a><br />
+<a href="http://cert.titech.ac.jp/">情報システム緊急対応チーム(CERT)</a><br />
+<a href="https://www.noc.titech.ac.jp/wlan/index.shtml">キャンパス無線LAN</a><br />
+<a href="http://www.gsic.titech.ac.jp/node/920">T2BOX メール添付抑制システム</a><br />
+<a href="http://www.officesoft.gsic.titech.ac.jp">東工大ソフトウェア提供サービス</a><br />
+<a href="./eduroam/">eduroamアカウント発行</a> / <a href="http://www.noc.titech.ac.jp/edu/index.html">設定方法</a><br />
+<a href="http://portal.titech.ac.jp/helpdesk.html">東工大ITサービスデスク</a><br />
+</div>
+
+</div><!-- right sidebar end -->
+
+</div><!--wrapper end-->
+
+<!-- footer begin -->
+<footer class="footer">
+portalauth003 '2021/09/28 17:09:55' &copy; 2006 GSIC, Tokyo Institute of Technology
+</footer><!-- footer end-->
+ 
+</body>
+</html>
